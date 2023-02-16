@@ -1,0 +1,13 @@
+<div class="card mb-3" *ngFor="let x of clientArr">
+    <fa-icon [icon] = "userIcon" class="card-img-top"></fa-icon>
+    <div class="card-body">
+      <h5 class="card-title">Name: {{x.name}}</h5>
+      <div class="card-marging-text">
+      <p class="card-text">ID#: {{x.cid}}</p> 
+      <p class="card-text">Project Type: {{x.project}}</p>
+      <p class="card-text">Status: {{x.status}}</p>
+      <p class="card-text">Phone: {{x.phone}}</p>
+      <p class="card-text">State: {{x.state}}</p>
+      </div>
+    </div>
+</div>

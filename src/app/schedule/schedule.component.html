@@ -1,0 +1,74 @@
+<h3>Schedule an appointment</h3>
+<div class="form">
+    <form [formGroup]="scheduleForm" (ngSubmit)="scheduleMeeting()">
+
+        <div class="date">
+            <label>
+                Date
+                <br>
+                <input type="date" name="date" id="date" class="form-control" required>
+            </label>
+            <br>
+            <label class="time">
+                Time
+                <br>
+                <input type="time" name="time" id="time" class="form-control" required>
+            </label>
+        </div>
+
+        <label>
+            Client ID
+            <br>
+            <input type="text" id="cid" placeholder="Client ID" formControlName="cid" class="form-control">
+        </label>
+
+        <br>
+
+        <label>
+            Client's Name
+            <br>
+            <input type="text" id="name" placeholder="Client's Name" formControlName="name" class="form-control">
+        </label>    
+
+        <br>
+
+        <label>
+            Project
+            <br>
+            <input type="text" id="project" placeholder="Project" formControlName="project" class="form-control">
+        </label>
+
+        <br>
+
+        <label>
+            Status
+            <br>
+            <select formControlName="cStatus" id="status" class="form-select"> 
+                <option *ngFor="let x of cStatus">
+                    {{x.title}}
+                </option>
+            </select>
+        </label>
+
+        <br>
+
+        <label>
+            Phone
+            <br>
+            <input type="text" id="phone" placeholder="Phone" formControlName="phone" class="form-control">
+        </label>
+
+        <br>      
+        
+        <label>
+            State
+            <br>
+            <input type="text" id="state" placeholder="State" formControlName="state" class="form-control">
+        </label>
+
+        <br>
+
+        <button type="submit" class="btn btn-primary">Schedule</button>
+
+    </form>
+</div>
